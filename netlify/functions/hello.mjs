@@ -1,3 +1,7 @@
+import { getStore } from "@netlify/blobs";
+
 export default async (req, context) => {
-  return new Response("Hello, world!");
+  const testStore = getStore("netlify-test");
+  const name = await testStore.get("name");
+  return new Response(`Hello, ${name}!`);
 };
