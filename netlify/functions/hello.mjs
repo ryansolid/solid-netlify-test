@@ -5,5 +5,3 @@ export default async (req, context) => {
   const name = await testStore.get("name");
   return new Response(`Hello, ${name}!`);
 };
-
-export const config = { path: "/hello" };
