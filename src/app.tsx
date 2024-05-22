@@ -20,6 +20,10 @@ async function purge() {
   return true;
 }
 
+async function fnPurge() {
+  await fetch("/purge");
+}
+
 export default function App() {
   const [count, setCount] = createSignal(0);
   const [random] = createResource(async () => {
@@ -34,7 +38,7 @@ export default function App() {
       <button class="increment" onClick={() => setCount(count() + 1)}>
         Clicks: {count()}
       </button>
-      <button class="increment" onClick={() => purge()}>Purge</button>
+      <button class="increment" onClick={() => fnPurge()}>Purge</button>
       <p>
         Visit{" "}
         <a href="https://start.solidjs.com" target="_blank">
