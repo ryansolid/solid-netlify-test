@@ -16,7 +16,7 @@ const randomNumber = GET(async function() {
 
 async function purge() {
   "use server";
-  await purgeCache({tags: ["random"]});
+  await purgeCache({tags: ["random"], token: "nfp_mBVixWKoYh8644BHLuUaFcXDGw6wEAXE8193"});
   return true;
 }
 
