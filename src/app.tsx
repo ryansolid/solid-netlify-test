@@ -17,6 +17,13 @@ export default function App() {
         </a>{" "}
         to learn how to build SolidStart apps.
       </p>
+      <form name="contact" method="post" data-netlify>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
     </main>
   );
 }
